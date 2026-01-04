@@ -22,6 +22,16 @@ console.log(mixArr); // prints: [11, true, NaN, null, "Hello"]
 // Note: declaring an array with `const` prevents reassignment (mixArr = ...)
 // but does NOT prevent modifying the contents (mixArr[0] = 99 would work)
 
+
+//Accessing elements by index
+console.log("First Element :", mixArr[0]); // logs the first element (11)
+console.log("Third Element :", mixArr[2]); // logs the third element (NaN)
+
+// Modifying elements by index
+mixArr[1] = false; // changes the second element from true to false
+console.log("Array after modification :", mixArr); // logs the modified array
+
+// Using array methods: pop() and push()
 let poppedElement = mixArr.pop(); // removes last element ("Hello") and returns it
 console.log("Popped Element :", poppedElement); // logs the value that was removed by pop()
 
@@ -29,3 +39,20 @@ console.log("Array after pop :", mixArr); // logs the array after the last eleme
 
 console.log(mixArr.push("Other Element")); // adds a new element at the end of the array and returns the new length
 console.log("Array after push :", mixArr); // logs the array after adding a new element at the end
+
+// Using shift() and unshift() methods
+let washDishes = [];
+washDishes.unshift("Big Pans"); // adds "Big Pans" at the start of the array and returns the new length
+console.log("Wash Dishes List after 1st Element:", washDishes);
+washDishes.unshift("Big Plates"); // adds "Big Plates" at the start of the array and returns the new length
+console.log("Wash Dishes List after 2nd Element:", washDishes);
+washDishes.unshift("Non-Stick Frying Pan"); // adds "Non-Stick Frying Pan" at the start of the array and returns the new length
+console.log("Wash Dishes List after unshift :", washDishes); // logs the array after adding elements at the start
+
+let firstDeletedItem = washDishes.shift(); // removes the first element ("Non-Stick Frying Pan") and returns it
+console.log("First Deleted Item :", firstDeletedItem); // logs the value that was removed by shift()
+console.log("Wash Dishes List after shift :", washDishes); // logs the array after the first element was removed    
+
+let secondDeletedItem = washDishes.shift(); // removes the first element ("Big Plates") and returns it
+console.log("Second Deleted Item :", secondDeletedItem);
+console.log("Wash Dishes List after second shift :", washDishes); // logs the array after the first element was removed
