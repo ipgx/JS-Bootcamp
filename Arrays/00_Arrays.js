@@ -17,15 +17,15 @@ console.log("Length of fruits is :", fruits.length); // .length returns number o
 
 
 // Arrays can store multiple data types in the same array (not type-restricted)
-const mixedArr = [11, true, NaN, null, "Hello"];
-console.log(mixedArr); // prints: [11, true, NaN, null, "Hello"]
-// Note: declaring an array with `const` prevents reassignment (mixedArr = ...)
-// but does NOT prevent modifying the contents (mixedArr[0] = 99 would work)
+const mixArr = [11, true, NaN, null, "Hello"];
+console.log(mixArr); // prints: [11, true, NaN, null, "Hello"]
+// Note: declaring an array with `const` prevents reassignment (mixArr = ...)
+// but does NOT prevent modifying the contents (mixArr[0] = 99 would work)
 
-let poppedElement = mixedArr.pop(); // removes last element ("Hello") and returns it
+let poppedElement = mixArr.pop(); // removes last element ("Hello") and returns it
 console.log("Popped Element :", poppedElement); // logs the value that was removed by pop()
 
-console.log("Array after pop :", mixedArr); // logs the array after the last element was removed
+console.log("Array after pop :", mixArr); // logs the array after the last element was removed
 
-mixedArr.push("Other Element")
-console.log("Array after push :", mixedArr); // logs the array after adding a new element at the end
+console.log(mixArr.push("Other Element")); // adds a new element at the end of the array and returns the new length
+console.log("Array after push :", mixArr); // logs the array after adding a new element at the end
